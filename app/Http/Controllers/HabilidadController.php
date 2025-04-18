@@ -31,4 +31,11 @@ class HabilidadController extends Controller
         
         return redirect()->route('panel.index');
     }
+
+    public function destroy($id)
+    {
+        $habilidad = Habilidad::find($id);
+        $habilidad->delete();
+        return redirect()->route('panel.index');
+    }
 }

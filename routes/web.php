@@ -32,7 +32,9 @@ Route::middleware('auth')->group(function () {
     // Panel
     Route::get('/panel', [ProjectController::class, 'index'])->name('panel.index');
     Route::post('/panel', [ProjectController::class, 'store'])->name('panel.store');
+    Route::delete('/panel/{id}', [ProjectController::class, 'destroy'])->name('panel.destroy');
     Route::post('/panel/habilidad', [HabilidadController::class, 'store'])->name('panel.habilidad.store');
+    Route::delete('/panel/habilidad/{id}', [HabilidadController::class, 'destroy'])->name('panel.habilidad.destroy');
 });
 
 

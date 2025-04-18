@@ -87,15 +87,12 @@ class ProjectController extends Controller
         return redirect()->route('panel.index');
     }
     
-    public function destroy(Project $project)
+    public function destroy($id)
     {
         // Eliminar la imagen si existe
-        if ($project->image) {
-            $path = str_replace('/storage/', '', $project->image);
-            if (Storage::disk('public')->exists($path)) {
-                Storage::disk('public')->delete($path);
-            }
-        }
+        $project = Project::find($id);
+        Storage::disk('public')->delete($project->image);
+
         
         $project->delete();
         return redirect()->route('panel.index');
