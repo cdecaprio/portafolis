@@ -7,9 +7,10 @@ export const profile = {
   name: 'Carla',
   greeting: '¡Hola! Soy la Carla',
   role: 'Desarrolladora Web Full Stack',
-  // Ruta de la foto dentro de /public. Sustituye /avatar.svg por tu imagen,
-  // por ejemplo /images/carla.jpg, y coloca el archivo en public/images/.
-  avatar: '/avatar.svg',
+  // Ruta de la foto dentro de /public. Usa siempre './' delante para que
+  // funcione también en GitHub Pages (/portafolis/).
+  // Ejemplo: './images/carla.jpg' con el archivo en public/images/carla.jpg
+  avatar: './avatar.svg',
   about:
     'Desarrolladora Full-Stack con experiencia construyendo aplicaciones de extremo a extremo: del frontend al backend, del diseño a la base de datos. Actualmente aprendiendo Python y explorando sus posibilidades. Siempre aprendiendo algo nuevo.',
 }
